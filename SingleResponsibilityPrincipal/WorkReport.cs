@@ -22,6 +22,37 @@ namespace SingleResponsibilityPrincipal
         {
             _entrys.RemoveAt(index);
         }
+
+        public override string ToString()
+        {
+            var x = base.ToString();
+            return string.Join(Environment.NewLine,_entrys.Select(x => $"Code: {x.ProjectCode}, Name: {x.ProjectName}, Hours: {x.SpentHours}"));
+            
+        }
+    }
+}
+
+
+
+
+
+//-----------Before SRP--single responsibility principal-----------------------
+/*
+ *  public class WorkReport
+    {
+        private readonly List<WorkReportEntry> _entrys;
+        public WorkReport()
+        {
+            _entrys = new List<WorkReportEntry>();
+        }
+        public void AddEntry(WorkReportEntry workReport)
+        {
+            _entrys.Add(workReport);
+        }
+        public void RemoveEntryAt(int index)
+        {
+            _entrys.RemoveAt(index);
+        }
         public void SaveToFile(string directoryPath, string fileName)
         {
             if (!Directory.Exists(directoryPath))
@@ -37,4 +68,4 @@ namespace SingleResponsibilityPrincipal
             
         }
     }
-}
+ */
