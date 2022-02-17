@@ -9,7 +9,7 @@ namespace SingleResponsibilityPrincipal
 {
     public class FileSaver
     {
-        public void SaveToFile(string directoryPath, string fileName, WorkReport report)
+        public void SaveToFile<T>(string directoryPath, string fileName, IEntryManager<T> report)
         {
             if (!Directory.Exists(directoryPath)) 
                 Directory.CreateDirectory(directoryPath);

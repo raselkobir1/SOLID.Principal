@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SingleResponsibilityPrincipal
 {
-    public class WorkReport
+    public class WorkReport : IEntryManager<WorkReportEntry>
     {
         private readonly List<WorkReportEntry> _entrys;
         public WorkReport()
