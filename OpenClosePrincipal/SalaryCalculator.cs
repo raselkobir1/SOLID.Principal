@@ -18,7 +18,15 @@ namespace OpenClosePrincipal
             double totalSalaries = 0D;
             foreach (var devReport in _developmentReports)
             {
-                totalSalaries += devReport.HourlyRate * devReport.WorkingHours;
+                if (devReport.Level == "Senior Developer")
+                {
+                    totalSalaries += devReport.HourlyRate * devReport.WorkingHours * 1.2;   //20% bonus for senior dev
+                }
+                else
+                {
+                    totalSalaries += devReport.HourlyRate * devReport.WorkingHours;
+                }
+
             }
             return totalSalaries;
         }
