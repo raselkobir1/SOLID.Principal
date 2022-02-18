@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID.Principal", "SOLID.Principal\SOLID.Principal.csproj", "{488DD56A-22A3-4266-8A6D-09EDD928D68C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SOLID.Principal", "SOLID.Principal\SOLID.Principal.csproj", "{488DD56A-22A3-4266-8A6D-09EDD928D68C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingleResponsibilityPrincipal", "SingleResponsibilityPrincipal\SingleResponsibilityPrincipal.csproj", "{3AAB1E95-F91C-4895-B6BA-35ADCDBBE6B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingleResponsibilityPrincipal", "SingleResponsibilityPrincipal\SingleResponsibilityPrincipal.csproj", "{3AAB1E95-F91C-4895-B6BA-35ADCDBBE6B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenClosePrincipal", "OpenClosePrincipal\OpenClosePrincipal.csproj", "{8341D376-3208-457B-A807-C5FD696D52AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{3AAB1E95-F91C-4895-B6BA-35ADCDBBE6B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3AAB1E95-F91C-4895-B6BA-35ADCDBBE6B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3AAB1E95-F91C-4895-B6BA-35ADCDBBE6B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8341D376-3208-457B-A807-C5FD696D52AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8341D376-3208-457B-A807-C5FD696D52AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8341D376-3208-457B-A807-C5FD696D52AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8341D376-3208-457B-A807-C5FD696D52AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
