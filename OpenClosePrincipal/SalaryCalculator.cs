@@ -32,3 +32,15 @@ namespace OpenClosePrincipal
         }
     }
 }
+
+
+/*
+ * Even though this solution is going to give us the correct result, this is not an optimal solution.
+
+Why is that?
+
+Mainly, because we had to modify our existing class behavior which worked perfectly.
+Another thing is that if our boss comes again and ask us to modify calculation for the junior dev’s as well,
+we would have to change our class again. This is totally against of what OCP stands for.
+
+ */
