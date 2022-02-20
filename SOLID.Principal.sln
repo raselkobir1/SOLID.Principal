@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SOLID.Principal", "SOLID.Pr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingleResponsibilityPrincipal", "SingleResponsibilityPrincipal\SingleResponsibilityPrincipal.csproj", "{3AAB1E95-F91C-4895-B6BA-35ADCDBBE6B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenClosePrincipal", "OpenClosePrincipal\OpenClosePrincipal.csproj", "{8341D376-3208-457B-A807-C5FD696D52AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenClosePrincipal", "OpenClosePrincipal\OpenClosePrincipal.csproj", "{8341D376-3208-457B-A807-C5FD696D52AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

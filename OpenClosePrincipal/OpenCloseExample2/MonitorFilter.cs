@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace OpenClosePrincipal.OpenCloseExample2
 {
-    public class MonitorFilter
+    public class MonitorFilter : IFilter<ComputerMonitor>
+    {
+        public List<ComputerMonitor> Filter(IEnumerable<ComputerMonitor> monitors, ISpecification<ComputerMonitor> specification)
+        {
+            return monitors.Where(m => specification.isSatisfied(m)).ToList();
+        }
+    }
+}
+
+
+
+/*
+     public class MonitorFilter 
     {
         public List<ComputerMonitor> FilterByType(IEnumerable<ComputerMonitor> monitors, MonitorType type)
         {
@@ -17,4 +29,4 @@ namespace OpenClosePrincipal.OpenCloseExample2
             return monitors.Where(x => x.Screen == screen).ToList();
         }
     }
-}
+ */

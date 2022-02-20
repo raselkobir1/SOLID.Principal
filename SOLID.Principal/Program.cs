@@ -54,19 +54,17 @@ namespace SOLID.Principal
                 new ComputerMonitor{ Name = "Dell D254", Screen= Screen.CurvedScreen, Type = MonitorType.LCD},
             };
             var filter = new MonitorFilter();
-            var lcdMonitros = filter.FilterByType(monitors, MonitorType.LCD);
-            Console.WriteLine("--------------All LCD Monitor-search by type------------");
+            var lcdMonitros = filter.Filter(monitors, new MonitorTypeSpecification(MonitorType.LCD));
+            Console.WriteLine("\n--------------All LCD Monitor-search by type------------");
             foreach (var monitor in lcdMonitros)
             {
                 Console.WriteLine($"Name : { monitor.Name}, Type: {monitor.Type}, Screen: {monitor.Screen }");
             }
-
-            Console.WriteLine("--------------All LED Monitor-Search by screen------------");
-            var ledMonitor = filter.FilterByScreen(monitors, Screen.CurvedScreen);
-            foreach (var monitor in lcdMonitros)
+            Console.WriteLine("\n-------------- All Wide screen Monitor-search by screen---------");
+            var wideScreenMonitors = filter.Filter(monitors, new ScreenSpecification(Screen.WideScreen));
+            foreach (var monitor in wideScreenMonitors)
             {
                 Console.WriteLine($"Name : { monitor.Name}, Type: {monitor.Type}, Screen: {monitor.Screen }");
-
             }
             Console.ReadKey();
         }
