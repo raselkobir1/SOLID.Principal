@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\LiskovSubstitutionPrincipal\LiskovSubstitutionPrincipal.csproj" />
     <ProjectReference Include="..\OpenClosePrincipal\OpenClosePrincipal.csproj" />
     <ProjectReference Include="..\SingleResponsibilityPrincipal\SingleResponsibilityPrincipal.csproj" />
   </ItemGroup>

@@ -1,4 +1,5 @@
-﻿using OpenClosePrincipal;
+﻿using LiskovSubstitutionPrincipal;
+using OpenClosePrincipal;
 using OpenClosePrincipal.OpenCloseExample2;
 using SingleResponsibilityPrincipal;
 using System;
@@ -66,6 +67,20 @@ namespace SOLID.Principal
             {
                 Console.WriteLine($"Name : { monitor.Name}, Type: {monitor.Type}, Screen: {monitor.Screen }");
             }
+
+            //----------------------------------Liskov Substitution principal---------------------------------------------
+            //===================================================================================================
+
+            var numbers = new int[] { 5, 7,4, 9, 6, 5, 4, 7 };
+            SumCalculator sumCalculator = new SumCalculator(numbers);
+            var totalSum = sumCalculator.Calculate();
+            Console.WriteLine($"The sum of all the numbers: {totalSum}");
+
+            SumCalculator evenNumbersSum = new EvenNumbersSumCalculator(numbers);
+            var evenNumSum = evenNumbersSum.Calculate();
+            Console.WriteLine($"The sum of even numbers: {evenNumSum}");
+
+
             Console.ReadKey();
         }
     }
