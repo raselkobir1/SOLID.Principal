@@ -11,14 +11,13 @@ namespace SOLID.Principal
     {
         static void Main(string[] args)
         {
+            //I:\CodeMeze\SOLID.Principal\SOLID.Principal\bin\Debug\net5.0\Reports
             //--------------------------------------Single Responsibilities principal:--------------------------
             //===================================================================================================
             var report = new WorkReport();
             report.AddEntry(new WorkReportEntry { ProjectCode = "123Ds", ProjectName = "Project1", SpentHours = 5 });
             report.AddEntry(new WorkReportEntry { ProjectCode = "123Es", ProjectName = "Project2", SpentHours = 6 });
             
-            //I:\CodeMeze\SOLID.Principal\SOLID.Principal\bin\Debug\net5.0\Reports
-
             var schedular = new Scheduler();
             schedular.AddEntry(new ScheduleTask { TaskId = 1, Content = "Do something now", ExecuteOn = Convert.ToDateTime(DateTime.UtcNow.ToShortDateString()) });
             schedular.AddEntry(new ScheduleTask { TaskId = 2, Content = "Don't forget me", ExecuteOn = Convert.ToDateTime(DateTime.UtcNow.ToShortDateString()) });
@@ -72,13 +71,13 @@ namespace SOLID.Principal
             //===================================================================================================
 
             var numbers = new int[] { 5, 7,4, 9, 6, 5, 4, 7 };
-            SumCalculator sumCalculator = new SumCalculator(numbers);
-            var totalSum = sumCalculator.Calculate();
+            Calculator sum = new SumCalculator(numbers);
+            var totalSum = sum.Calculate();
             Console.WriteLine($"The sum of all the numbers: {totalSum}");
 
-            SumCalculator evenNumbersSum = new EvenNumbersSumCalculator(numbers);
-            var evenNumSum = evenNumbersSum.Calculate();
-            Console.WriteLine($"The sum of even numbers: {evenNumSum}");
+            Calculator evenSum = new EvenNumbersSumCalculator(numbers);
+            var evenTotalSum = evenSum.Calculate();
+            Console.WriteLine($"The sum of even numbers: {evenTotalSum}");
 
 
             Console.ReadKey();
