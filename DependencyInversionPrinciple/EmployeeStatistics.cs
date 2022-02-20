@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DependencyInversionPrinciple
 {
-    public class EmployeeStatistics  //higher lavel class
+    public class EmployeeStatistics  //higher lavel class/module
     {
         private readonly EmployeeManager _empManager;
         public EmployeeStatistics(EmployeeManager empManager) 
@@ -15,7 +15,7 @@ namespace DependencyInversionPrinciple
         }
         public int CountFemaleManager()
         {
-            return _empManager.Employees().Count(emp => emp.Gender.Equals(Gender.Female) && emp.Position.Equals(Position.Manager));
+            return _empManager.GetEmployeeByGenderAndPosition(Gender.Female, Position.Manager).Count();
         }
     }
 }

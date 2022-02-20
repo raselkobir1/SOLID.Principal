@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DependencyInversionPrinciple
 {
-    public class EmployeeManager
+    public class EmployeeManager : IEmployeeSearchable    //lower lavel clsss/ module
     {
         private readonly List<Employee> _employees;
         public EmployeeManager()
@@ -17,9 +17,9 @@ namespace DependencyInversionPrinciple
         {
             _employees.Add(employee);   
         }
-        public List<Employee> Employees()
+        public IEnumerable<Employee> GetEmployeeByGenderAndPosition(Gender gender, Position position)
         {
-            return _employees;
+            return _employees.Where(emp => emp.Gender.Equals(gender) && emp.Position.Equals(position));
         }
     }
 }

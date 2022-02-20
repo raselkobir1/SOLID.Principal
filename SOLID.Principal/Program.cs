@@ -1,4 +1,5 @@
-﻿using LiskovSubstitutionPrincipal;
+﻿using DependencyInversionPrinciple;
+using LiskovSubstitutionPrincipal;
 using OpenClosePrincipal;
 using OpenClosePrincipal.OpenCloseExample2;
 using SingleResponsibilityPrincipal;
@@ -79,7 +80,18 @@ namespace SOLID.Principal
             var evenTotalSum = evenSum.Calculate();
             Console.WriteLine($"The sum of even numbers: {evenTotalSum}");
 
+            //----------------------------------Dipendency Inversion of Control principal---------------------------------------------
+            //===================================================================================================
 
+            var empManager = new EmployeeManager();
+            empManager.AddEmployee(new Employee { Name = "Rasel", Gender = Gender.Male, Position = Position.Manager });
+            empManager.AddEmployee(new Employee { Name = "Leen", Gender = Gender.Female, Position = Position.Manager });
+            empManager.AddEmployee(new Employee { Name = "Mike", Gender = Gender.Male, Position = Position.Administrator });
+
+            var stats = new EmployeeStatistics(empManager);
+            var count = stats.CountFemaleManager();
+            Console.WriteLine($"\nNumber of female managers in our company is: {count}");
+            
             Console.ReadKey();
         }
     }
