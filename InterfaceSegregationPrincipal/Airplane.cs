@@ -6,13 +6,8 @@ using System.Threading.Tasks;
 
 namespace InterfaceSegregationPrincipal
 {
-    public class Airplane : IVehicle
+    public class Airplane : IAirplane
     {
-        public void Drive()
-        {
-            throw new NotImplementedException();
-        }
-
         public void Fly()
         {
             Console.WriteLine("Flying a plane");

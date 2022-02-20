@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace InterfaceSegregationPrincipal
 {
-    public class Car : ICar
+    public interface ICar
     {
-        public void Drive()
-        {
-            Console.WriteLine("Driving a car");
-        }
+        void Drive();
     }
 }
