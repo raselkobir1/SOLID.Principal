@@ -1,6 +1,7 @@
 ﻿using DependencyInversionPrinciple;
 using LiskovSubstitutionPrincipal;
 using OpenClosePrincipal;
+using OpenClosePrincipal.Example3;
 using OpenClosePrincipal.OpenCloseExample2;
 using SingleResponsibilityPrincipal;
 using System;
@@ -68,8 +69,21 @@ namespace SOLID.Principal
                 Console.WriteLine($"Name : { monitor.Name}, Type: {monitor.Type}, Screen: {monitor.Screen }");
             }
 
+
+            //----------------------Example 3------------------------------
+            InvoiceForCancel cancel = new InvoiceForCancel(100);
+            var cancelInvoiceAmount = cancel.CalculateInvoiceAmount();
+
+            InvoiceForReissue reissue = new InvoiceForReissue(100);
+            var reIssueInvoiceAmount = reissue.CalculateInvoiceAmount();
+
+            InvoiceForRefund refund = new InvoiceForRefund(300);
+            var invoiceAmountForRefund = refund.CalculateInvoiceAmount();
+
+            Console.WriteLine("===================================================================");
+            Console.WriteLine($"------------> cancelInvoiceAmount :{cancelInvoiceAmount} \n------------> reIssueInvoiceAmount: {reIssueInvoiceAmount}  \n------------> refundInvoiceAmount: {invoiceAmountForRefund}");
             //----------------------------------Liskov Substitution principal---------------------------------------------
-            //===================================================================================================
+            //============================================================================================================
 
             var numbers = new int[] { 5, 7,4, 9, 6, 5, 4, 7 };
             Calculator sum = new SumCalculator(numbers);

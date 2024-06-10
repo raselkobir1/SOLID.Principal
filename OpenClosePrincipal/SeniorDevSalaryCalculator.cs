@@ -14,7 +14,8 @@ namespace OpenClosePrincipal
 
         public override double CalculateSalary()
         {
-            return DeveloperReport.HourlyRate * DeveloperReport.WorkingHours * 1.2;
+            double seniorSalary = DeveloperReport.HourlyRate * DeveloperReport.WorkingHours * 1.2;
+            return seniorSalary;
         }
     }
 }
