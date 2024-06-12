@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace OpenClosePrincipal
+﻿namespace OpenClosePrincipal
 {
     public class DeveloperReport
     {

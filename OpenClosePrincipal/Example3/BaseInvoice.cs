@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace OpenClosePrincipal.Example3
+﻿namespace OpenClosePrincipal.Example3
 {
     public abstract class BaseInvoice
     {

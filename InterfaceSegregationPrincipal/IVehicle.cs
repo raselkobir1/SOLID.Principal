@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace InterfaceSegregationPrincipal
+﻿namespace InterfaceSegregationPrincipal
 {
     public interface IVehicle 
     {
